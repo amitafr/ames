@@ -11,6 +11,7 @@ import { FirebaseService } from '../shared/firebase.service';
 
     selector: 'event-view',
     templateUrl: 'event-view.component.html',
+    styleUrls: ['event-view.component.scss']
 })
 export class EventViewComponent {
     event: Event;

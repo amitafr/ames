@@ -24,7 +24,9 @@
       <div class="left">
         <p><i class="material-icons">location_on</i>{{event.location}}</p>
         <p><i class="material-icons">date_range</i>{{event.startDate | date:"MMM d"}} - {{event.endDate | date:"MMM d"}}</p>
-        <p i18n><i class="material-icons">person</i>Leads: <span *ngFor="let lead of event.leads | refirebase">{{(lead | fireJoin:'/users/' | async)?.name}} </span></p>
+        <p i18n><i class="material-icons">person</i>Leads:
+          <span class="lead-list" *ngFor="let lead of event.leads | refirebase">{{(lead | fireJoin:'/users/' | async)?.name}}</span>
+        </p>
       </div>
 
       <div class="right">
